@@ -7,7 +7,7 @@ const Results = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold">Results</h1>
+      <h1 className="text-xl font-bold mb-4">Results</h1>
       <DataTable data={data} />
     </div>
   );

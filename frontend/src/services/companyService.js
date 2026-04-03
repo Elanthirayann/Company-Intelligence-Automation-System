@@ -5,5 +5,5 @@ export const uploadCSV = async (file) => {
   formData.append("file", file);
 
   const res = await API.post("/upload", formData);
-  return res.data;
+  return res.data.data;
 };

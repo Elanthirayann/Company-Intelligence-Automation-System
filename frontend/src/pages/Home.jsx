@@ -6,8 +6,12 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleUpload = async (file) => {
-    const res = await uploadCSV(file);
-    navigate("/results", { state: { data: res } });
+    try {
+      const data = await uploadCSV(file);
+      navigate("/results", { state: { data } });
+    } catch (err) {
+      console.error("Upload failed:", err);
+    }
   };
 
   return (
