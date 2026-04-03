@@ -1,2 +1,3 @@
-.env
 backend/.env
+config.bat
+node_modules
